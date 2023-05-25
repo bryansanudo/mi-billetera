@@ -1,8 +1,10 @@
 import React, { useState } from "react";
-
-import { signInWithEmailAndPassword } from "firebase/auth";
+import {
+  signInWithEmailAndPassword,
+  GoogleAuthProvider,
+  signInWithPopup,
+} from "firebase/auth";
 import { auth } from "@/configFirebase";
-
 import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 import { FcGoogle } from "react-icons/fc";
@@ -20,17 +22,20 @@ const Login = () => {
   const [reset, setReset] = useState(false);
 
   const redirect = useNavigate();
-
   const loginUser = (e) => {
     e.preventDefault();
-
+    setIsLoading(true);
     signInWithEmailAndPassword(auth, email, password)
-      .then(() => {
+      .then((userCredential) => {
+        const user = userCredential.user;
+        console.log(user);
+        setIsLoading(false);
         toast.success("Inicio de sesion exitoso ");
         redirect("/balance");
       })
       .catch((error) => {
         toast.error(error.message);
+        setIsLoading(false);
       });
   };
 
