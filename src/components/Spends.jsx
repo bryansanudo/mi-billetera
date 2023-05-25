@@ -63,7 +63,7 @@ const Spends = () => {
 
   useEffect(() => {
     getData();
-  }, []);
+  }, [data]);
   return (
     <>
       <Section title="Mis Gastos">

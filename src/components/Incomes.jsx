@@ -61,7 +61,7 @@ const Incomes = () => {
 
   useEffect(() => {
     getData();
-  }, []);
+  }, [data]);
   return (
     <>
       <Section title="Mis Ingresos">
