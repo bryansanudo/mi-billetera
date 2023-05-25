@@ -1,18 +1,20 @@
-import { Link, NavLink } from "react-router-dom";
+import { Link, NavLink, useNavigate } from "react-router-dom";
 import { TbDoorExit } from "react-icons/tb";
 import { FaUserCircle } from "react-icons/fa";
 import { signOut } from "firebase/auth";
 import { auth } from "@/configFirebase";
 import { toast } from "react-toastify";
 import { ShowOnLogin, ShowOnLogout } from "@/components/HiddenLink";
-import AdminOnlyRoute from "@/components/AdminOnlyRoute";
+
 import { AdminOnlyLink } from "@/components/AdminOnlyRoute";
 
 const HeaderDesktop = ({ activeLink, displayName }) => {
+  const redirect = useNavigate();
   const logout = () => {
     signOut(auth)
       .then(() => {
         toast.success("Logout Successfully.");
+        redirect("/");
       })
       .catch((error) => {
         toast(error.message);

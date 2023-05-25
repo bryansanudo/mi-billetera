@@ -59,7 +59,7 @@ const Header = () => {
             {/* desktop */}
 
             <HeaderDesktop activeLink={activeLink} displayName={displayName} />
-            <HeaderMobile activeLink={activeLink} />
+            <HeaderMobile activeLink={activeLink} displayName={displayName} />
 
             {/* mobile */}
           </nav>

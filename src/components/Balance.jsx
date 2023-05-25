@@ -99,11 +99,11 @@ const Balance = () => {
             <div className="flex flex-col lg:flex-row lg:gap-14 items-center justify-center mb-10 ">
               <p className="py-4 flex flex-col">
                 <span className="stat-title">Gastos</span>
-                <span className="stat-value">{userSpends}</span>
+                <span className="stat-value">${userSpends}</span>
               </p>
               <p className="py-4 flex flex-col">
                 <span className="stat-title">Ingresos</span>
-                <span className="stat-value">{userIncomes}</span>
+                <span className="stat-value">${userIncomes}</span>
               </p>
             </div>
 
@@ -111,18 +111,18 @@ const Balance = () => {
               <>
                 <p className="py-4 flex flex-col">
                   <span className="stat-title text-green-500">
-                    Balance Actual
+                    Balance Positivo
                   </span>
-                  <span className="stat-value">{balance}</span>
+                  <span className="stat-value">${balance}</span>
                 </p>
               </>
             ) : (
               <>
                 <p className="py-4 flex flex-col">
                   <span className="stat-title text-red-500">
-                    Balance Actual
+                    Balance Negativo
                   </span>
-                  <span className="stat-value">{balance}</span>
+                  <span className="stat-value">${balance}</span>
                 </p>
               </>
             )}

@@ -31,7 +31,7 @@ const Login = () => {
         console.log(user);
         setIsLoading(false);
         toast.success("Inicio de sesion exitoso ");
-        redirect("/");
+        redirect("/balance");
       })
       .catch((error) => {
         toast.error(error.message);
@@ -48,7 +48,7 @@ const Login = () => {
         console.log(user);
         setIsLoading(false);
         toast.success("Inicio de sesion exitoso");
-        redirect("/");
+        redirect("/balance");
       })
       .catch((error) => {
         toast.error(error.message);

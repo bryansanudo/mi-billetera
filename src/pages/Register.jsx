@@ -29,7 +29,7 @@ const Register = () => {
         console.log(user);
         setIsLoading(false);
         toast.success("Usuario Creado exitosamente ");
-        redirect("/spents");
+        redirect("/balance");
       })
       .catch((error) => {
         toast.error(error.message);
