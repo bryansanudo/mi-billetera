@@ -152,12 +152,14 @@ const AddProduct = () => {
   return (
     <>
       {isLoading && <Loader />}
-      <Section title={detectForm(id, "Agregar Producto", "Editar Producto")}>
+      <Section
+        title={detectForm(id, "Agregar Publicación", "Editar Publicación")}
+      >
         <form
           onSubmit={detectForm(id, addProduct, editProduct)}
           className="shadow-md shadow-black rounded-xl p-6 w-full max-w-[800px] flex flex-col gap-4 items-center justify-center"
         >
-          <label className="w-full text-left">Nombre Del Producto</label>
+          <label className="w-full text-left">Titulo de la publicación</label>
           <input
             required
             type="text"
@@ -166,7 +168,7 @@ const AddProduct = () => {
             value={product.name}
             onChange={(e) => handleInputChange(e)}
           />
-          <label className="w-full text-left">Imagen Del Producto</label>
+          <label className="w-full text-left">Imagen de la publicación</label>
           {uploadProgress === 0 ? null : (
             <div className="bg-[#aaa] border-[1px] border-[solid] rounded-[10px] w-full">
               <div
@@ -175,7 +177,7 @@ const AddProduct = () => {
               >
                 {uploadProgress < 100
                   ? `Subiendo ${uploadProgress}%`
-                  : `Subida Completada ${uploadProgress}%`}
+                  : `Subida Completada Al ${uploadProgress}%`}
               </div>
             </div>
           )}
@@ -198,7 +200,9 @@ const AddProduct = () => {
             />
           )}
 
-          <label className="w-full text-left">Categoria Del Producto</label>
+          <label className="w-full text-left">
+            Categoria de la publicación
+          </label>
           <select
             required
             name="category"
@@ -207,7 +211,7 @@ const AddProduct = () => {
             className="input input-primary text-lg input-md w-full"
           >
             <option value="" disabled>
-              -- Selecciona Categoria Del Producto --
+              -- Selecciona Categoria De La Publicación --
             </option>
             {categories.map((cat) => {
               return (
@@ -217,7 +221,7 @@ const AddProduct = () => {
               );
             })}
           </select>
-          <label className="w-full text-left">Enlace Del Producto</label>
+          <label className="w-full text-left">Enlace de la publicación</label>
           <input
             required
             type="text"
@@ -226,7 +230,9 @@ const AddProduct = () => {
             value={product.link}
             onChange={(e) => handleInputChange(e)}
           />
-          <label className="w-full text-left">Descripcion Del Producto</label>
+          <label className="w-full text-left">
+            Descripcion de la publicacion
+          </label>
           <textarea
             required
             className="textarea textarea-primary w-full"

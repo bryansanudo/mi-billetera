@@ -106,11 +106,10 @@ const ViewProducts = () => {
           <thead className="">
             <tr className="h-20">
               <th className="shadow-md shadow-primary rounded-xl">s/n</th>
-              <th className="shadow-md shadow-primary rounded-xl">Image</th>
-              <th className="shadow-md shadow-primary rounded-xl">Name</th>
-              <th className="shadow-md shadow-primary rounded-xl">Category</th>
-              <th className="shadow-md shadow-primary rounded-xl">Price</th>
-              <th className="shadow-md shadow-primary rounded-xl">Actions</th>
+              <th className="shadow-md shadow-primary rounded-xl">Imagen</th>
+              <th className="shadow-md shadow-primary rounded-xl">Nombre</th>
+              <th className="shadow-md shadow-primary rounded-xl">Categoria</th>
+              <th className="shadow-md shadow-primary rounded-xl">Acciones</th>
             </tr>
           </thead>
           <tbody className="">
@@ -128,7 +127,7 @@ const ViewProducts = () => {
                   </td>
                   <td className="text-center">{name}</td>
                   <td className="text-center">{category}</td>
-                  <td className="text-center">{`$${price}`}</td>
+
                   <td>
                     <div className="flex items-center justify-center gap-4">
                       <Link to={`/admin/add-product/${id}`}>

@@ -126,7 +126,7 @@ const Balance = () => {
                 </p>
               </>
             )}
-            <img src="/balance.jpg" alt="" />
+            <img src="https://i.ibb.co/MNq4b9g/balance.jpg" alt="" />
           </div>
         </div>
       </Section>
