@@ -23,11 +23,7 @@ const Contact = () => {
 
   return (
     <>
-      <Section
-        name="contacto"
-        title="Contacto"
-        subtitle=" Lorem ipsum dolor, sit amet consectetur adipisicing elit. Placeat molestiae dolore dolor nam aliquam cumque repellendus necessitatibus maiores minima repellat quam reiciendis facere voluptates sed beatae, et omnis consectetur deserunt."
-      >
+      <Section title="Contacto">
         <div className="flex flex-col items-center justify-center gap-8 text-center">
           <div className="flex w-full items-center justify-evenly text-3xl">
             {SOCIAL.map(({ id, link, icon }) => (

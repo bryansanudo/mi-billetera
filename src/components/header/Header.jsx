@@ -50,7 +50,7 @@ const Header = () => {
           <div className="text-white w-[20%] text-lg">
             <Link to="/">
               <h2>
-                MyMoney<span className="text-primary">App</span>
+                Mi<span className="text-primary"> Billetera</span>
               </h2>
             </Link>
           </div>

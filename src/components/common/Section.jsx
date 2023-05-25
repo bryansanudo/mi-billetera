@@ -5,7 +5,7 @@ const Section = ({ title, subtitle, children, name }) => {
     <div>
       <section
         name={name}
-        className="min-h-fit flex flex-col justify-start items-center py-16 px-5 text-center"
+        className="min-h-fit flex flex-col justify-start items-center py-20 px-5 text-center"
       >
         <p className="font-bold text-4xl my-8 text-center text-transparent bg-clip-text  bg-gradient-to-r from-[#e67c04] to-[#5C24B3]  transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110 md:text-5xl capitalize ">
           {title}

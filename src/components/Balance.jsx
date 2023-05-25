@@ -83,7 +83,7 @@ const Balance = () => {
           onClick={handleBalance}
         >
           <img src="/favicon.svg" className="h-10 animate-bounce" />
-          <p className="capitalize">My Money</p>
+          <p className="capitalize">Mi Billetera</p>
         </label>
 
         <input type="checkbox" id="my-modal-3" className="modal-toggle" />

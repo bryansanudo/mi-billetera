@@ -12,7 +12,7 @@ const Footer = () => {
           <div className="mb-[50px] h-[2px] bg-white opacity-10" />
           <div className="flex items-center justify-center lg:justify-between flex-wrap gap-4 ">
             <p className="font-bold text-4xl my-8 text-center text-transparent bg-clip-text  bg-gradient-to-r from-[#e67c04] to-[#5C24B3] hover:from-[#5C24B3] hover:to-[#e67c04] transition duration-500 ease-in-out transform   md:text-5xl">
-              My Money
+              Mi Billetera
             </p>
             <div className="flex items-center justify-center flex-wrap gap-5">
               <button type="button" onClick={useScroll}>

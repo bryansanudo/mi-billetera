@@ -9,6 +9,7 @@ import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 import { FcGoogle } from "react-icons/fc";
 import Loader from "@/components/Loader";
+import Section from "@/components/common/Section";
 
 import Reset from "@/components/Reset";
 
@@ -58,6 +59,7 @@ const Login = () => {
   return (
     <>
       {isLoading && <Loader />}
+
       <section
         className={`flex flex-col w-full gap-8 lg:flex-row py-28 md:px-20 px-4 ${
           reset ? "hidden" : ""
