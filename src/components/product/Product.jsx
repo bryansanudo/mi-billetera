@@ -27,18 +27,19 @@ const Product = () => {
         {products.map((publication) => (
           <div
             key={publication.id}
-            className="shadow-lg shadow-black rounded-xl p-4 flex flex-col gap-4"
+            className="shadow-lg shadow-primary rounded-xl p-4 flex flex-col justify-between items-center gap-4"
           >
-            <div className="flex justify-between">
+            <div className="flex justify-between w-full ">
               <h2 className="text-3xl capitalize ">{publication.name}</h2>
               <Link to={`/publication/${publication.id}`}>
                 <IoMdMore className="text-4xl animate-pulse text-primary font-bold" />
               </Link>
             </div>
+
             <img
               src={publication.imageURL}
               alt=""
-              className="rounded-xl h-[200px] object-contain shadow-md shadow-primary "
+              className=" object-contain h-[300px] w-[300px] shadow-md shadow-black  rounded-xl "
             />
           </div>
         ))}
